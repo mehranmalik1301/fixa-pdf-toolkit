@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIXA | PDF Toolkit</title>
+
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="styles/scripts/main.js" defer></script>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">FIXA</div>
+    <ul class="nav-links">
+        <li><a href="#organize">Organize</a></li>
+        <li><a href="#optimize">Optimize</a></li>
+        <li><a href="#convert-to">Convert To</a></li>
+        <li><a href="#convert-from">Convert From</a></li>
+        <li><a href="#edit">Edit</a></li>
+        <li><a href="#security">Security</a></li>
+    </ul>
+</nav>
+
+<header>
+    <h1>🛠️ FIXA</h1>
+    <p>Fast. Functional. Beautiful. Your Ultimate PDF Toolbox</p>
+</header>
+
+<main class="grid">
+
+<section id="organize">
+    <h2>📁 Organize PDF</h2>
+    <button onclick="openTool('merge')">Merge PDF</button>
+    <button onclick="openTool('split')">Split PDF</button>
+    <button onclick="openTool('remove-pages')">Remove Pages</button>
+    <button onclick="openTool('extract-pages')">Extract Pages</button>
+    <button onclick="openTool('reorder')">Reorder PDF</button>
+    <button onclick="openTool('scan')">Scan to PDF</button>
+</section>
+
+<section id="optimize">
+    <h2>⚙️ Optimize PDF</h2>
+    <button onclick="openTool('compress')">Compress PDF</button>
+    <button onclick="openTool('repair')">Repair PDF</button>
+    <button onclick="openTool('ocr')">OCR PDF</button>
+</section>
+
+<section id="convert-to">
+    <h2>➕ Convert to PDF</h2>
+    <button onclick="openTool('jpg-to-pdf')">JPG to PDF</button>
+    <button onclick="openTool('word-to-pdf')">Word to PDF</button>
+    <button onclick="openTool('ppt-to-pdf')">PowerPoint to PDF</button>
+    <button onclick="openTool('excel-to-pdf')">Excel to PDF</button>
+    <button onclick="openTool('html-to-pdf')">HTML to PDF</button>
+</section>
+
+<section id="convert-from">
+    <h2>➖ Convert from PDF</h2>
+    <button onclick="openTool('pdf-to-jpg')">PDF to JPG</button>
+    <button onclick="openTool('pdf-to-word')">PDF to Word</button>
+    <button onclick="openTool('pdf-to-ppt')">PDF to PowerPoint</button>
+    <button onclick="openTool('pdf-to-excel')">PDF to Excel</button>
+    <button onclick="openTool('pdf-to-pdfa')">PDF to PDF/A</button>
+</section>
+
+<section id="edit">
+    <h2>✏️ Edit PDF</h2>
+    <button onclick="openTool('rotate')">Rotate PDF</button>
+    <button onclick="openTool('add-page-numbers')">Add Page Numbers</button>
+    <button onclick="openTool('remove-watermark')">Remove Watermark</button>
+    <button onclick="openTool('watermark')">Add Watermark</button>
+    <button onclick="openTool('crop')">Crop PDF</button>
+    <button onclick="openTool('edit-directly')">Direct Edit PDF</button>
+</section>
+
+<section id="security">
+    <h2>🔐 PDF Security</h2>
+    <button onclick="openTool('unlock')">Unlock PDF</button>
+    <button onclick="openTool('protect')">Protect PDF</button>
+    <button onclick="openTool('sign')">Sign PDF</button>
+    <button onclick="openTool('redact')">Redact PDF</button>
+    <button onclick="openTool('compare')">Compare PDFs</button>
+</section>
+
+</main>
+
+<!-- File Processing Area -->
+<div class="workspace" id="workspace" hidden>
+    <h2 id="toolTitle">Select File</h2>
+
+    <p id="toolDescription">Choose your file to continue.</p>
+
+    <label for="filePicker" class="browse-btn">
+        Browse Files
+    </label>
+
+    <input type="file" id="filePicker" hidden multiple>
+
+    <div id="fileList"></div>
+
+    <button id="processBtn" hidden>Continue</button>
+
+    <p id="status"></p>
+</div>
+
+<footer>
+    © 2026 FIXA • Created by MEHRAN HASSAN
+    <br>Powered by HTML + CSS + JavaScript
+</footer>
+
+</body>
+</html>

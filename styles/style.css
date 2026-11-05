@@ -1,0 +1,368 @@
+
+/* =================================
+   FIXA - MODERN DARK THEME
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #0b1020;
+    color: #f5f5ff;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background: #11182b;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 1px solid #252d46;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #a78bfa, #ec4899);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #c4c8dc;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #a78bfa;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    padding: 85px 20px 75px;
+    background:
+        radial-gradient(ellipse at top, #30205d 0%, #151a35 45%, #0b1020 100%);
+}
+
+header h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #a78bfa, #ec4899);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+header p {
+    color: #b7bdd5;
+    font-size: 16px;
+}
+
+/* TOOL GRID */
+
+.grid {
+    width: 90%;
+    max-width: 1250px;
+    margin: 45px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 25px;
+}
+
+.grid section {
+    background: linear-gradient(145deg, #171f35, #11182a);
+    padding: 28px;
+    border: 1px solid #293451;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+.grid section:hover {
+    transform: translateY(-5px);
+    border-color: #8b5cf6;
+    box-shadow: 0 12px 30px rgba(139,92,246,0.13);
+}
+
+.grid h2 {
+    font-size: 19px;
+    margin-bottom: 22px;
+    color: #e3ddff;
+}
+
+/* TOOL BUTTONS */
+
+.grid button {
+    display: block;
+    width: 100%;
+    padding: 14px 15px;
+    margin: 11px 0;
+    border: 1px solid #303a55;
+    border-radius: 9px;
+    background: #202a42;
+    color: #e0e5f5;
+    cursor: pointer;
+    text-align: left;
+    font-size: 14px;
+    font-family: inherit;
+    transition: 0.25s ease;
+}
+
+.grid button:hover {
+    background: linear-gradient(90deg, #7046d8, #a044b9);
+    color: white;
+    border-color: #a78bfa;
+    transform: translateX(4px);
+}
+
+/* FILE WORKSPACE */
+
+.workspace {
+    width: 90%;
+    max-width: 700px;
+    margin: 35px auto;
+    padding: 35px;
+    background: #171f35;
+    border: 1px solid #394363;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+}
+
+.workspace[hidden] {
+    display: none !important;
+}
+
+.workspace h2 {
+    color: #c4a7ff;
+    margin-bottom: 15px;
+}
+
+.workspace p {
+    color: #b8bfd3;
+    margin-bottom: 18px;
+}
+
+.browse-btn {
+    display: inline-block;
+    padding: 14px 35px;
+    background: linear-gradient(90deg, #7046d8, #a044b9);
+    color: white;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.browse-btn:hover {
+    transform: scale(1.04);
+    box-shadow: 0 5px 20px rgba(139,92,246,0.3);
+}
+
+#fileList {
+    margin: 20px 0;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+#fileList p {
+    padding: 13px;
+    background: #222d48;
+    border: 1px solid #394563;
+    border-radius: 8px;
+    margin: 8px 0;
+}
+
+#processBtn {
+    background: linear-gradient(90deg, #7046d8, #a044b9);
+    color: white;
+    border: none;
+    padding: 13px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#status {
+    margin-top: 15px;
+    color: #a7f3d0;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    background: #11182b;
+    color: #9ba5c0;
+    border-top: 1px solid #293451;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 768px) {
+
+    .navbar {
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    header {
+        padding: 55px 15px;
+    }
+
+    header h1 {
+        font-size: 40px;
+    }
+
+    .grid {
+        width: 92%;
+    }
+}
+
+@media(max-width: 480px) {
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    header p {
+        font-size: 13px;
+    }
+
+    .grid section {
+        padding: 20px;
+    }
+
+    .workspace {
+        padding: 22px;
+    }
+}
+
+/* =================================
+   FIXA NEON NAVBAR EFFECT
+================================= */
+
+.navbar {
+    background: #101116;
+    padding: 20px 6%;
+    border-bottom: 1px solid #ff303b;
+
+    box-shadow:
+        0 4px 15px rgba(255, 35, 55, 0.25),
+        0 0 25px rgba(255, 35, 55, 0.12);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* NEON FIXA LOGO */
+
+.logo {
+    color: #ff303b;
+    background: none;
+    -webkit-text-fill-color: #ff303b;
+
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: 4px;
+
+    text-shadow:
+        0 0 5px #ff303b,
+        0 0 10px #ff303b,
+        0 0 20px #ff303b,
+        0 0 40px rgba(255, 48, 59, 0.7);
+
+    animation: neonPulse 2s infinite alternate;
+}
+
+/* NEON NAV LINKS */
+
+.nav-links a {
+    color: #ffffff;
+    font-weight: 500;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #00eaff;
+
+    text-shadow:
+        0 0 5px #00eaff,
+        0 0 12px #00eaff,
+        0 0 22px #00eaff;
+}
+
+/* GLOWING UNDERLINE */
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+
+    background: #00eaff;
+    box-shadow: 0 0 8px #00eaff,
+                0 0 15px #00eaff;
+
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* NEON ANIMATION */
+
+@keyframes neonPulse {
+    from {
+        text-shadow:
+            0 0 5px #ff303b,
+            0 0 10px #ff303b,
+            0 0 18px #ff303b;
+    }
+
+    to {
+        text-shadow:
+            0 0 8px #ff303b,
+            0 0 18px #ff303b,
+            0 0 35px #ff303b,
+            0 0 50px #ff303b;
+    }
+}
